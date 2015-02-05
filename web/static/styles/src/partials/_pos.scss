@@ -1,0 +1,375 @@
+$red-highlight: #FE9292;
+$orange-highlight: #FFA34A;
+$yellow-highlight: #F3F598;
+$green-highlight: #92FE96;
+$blue-highlight: #578EFF;
+$light-blue-highlight: #92B5FE;
+$indigo-highlight: #EF8CFF;
+$violet-highlight: #A07FEF;
+
+$white-highlight: #eee;
+
+
+
+$no-tag-color: $white-highlight;
+$adj-color: $indigo-highlight;
+$adv-color: $violet-highlight;
+$adp-color: $yellow-highlight;
+$conj-color: $green-highlight;
+$det-color: $yellow-highlight;
+$noun-color: $blue-highlight;
+$num-color: $orange-highlight;
+$pron-color: $light-blue-highlight;
+$prt-color: $yellow-highlight;
+$verb-color: $red-highlight;
+$x-color: $white-highlight;
+$punct-color: $white-highlight;
+$eol-color: $white-highlight;
+
+
+$level-1-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+$level-2-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+$level-3-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+$level-4-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+$level-5-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+
+$large: new-breakpoint(min-width 1200px);
+$medium: new-breakpoint(min-width 900px max-width 1200px);
+$small: new-breakpoint(min-width 700px max-width 900px);
+$mobile-large: new-breakpoint(min-width 450px max-width 700px);
+$mobile-small: new-breakpoint(max-width 450px -webkit-max-device-pixel-ratio 2);
+$mobile-hdpi: new-breakpoint(max-width 450px -webkit-min-device-pixel-ratio 2);
+
+
+body {
+    // background: #B5A1D3 url(/images/arabesque.png);
+    // background: #444 url(/images/arabesque.png);
+    background: #333 url(/images/arabesque.png);
+    margin-left: auto;
+    margin-right: auto;
+    width: 75%;
+    // filter: grayscale(100%);
+
+    @include media($large) {
+        font-size: 1em;
+    }
+
+    @include media($medium) {
+        font-size: 0.8em;
+    }
+
+    @include media($small) {
+        font-size: 0.6em;
+    }
+
+    @include media($mobile-large) {
+        font-size: 0.4em;
+    }
+
+    @include media($mobile-small) {
+        width: 95%;
+        font-size: 0.25em;
+    }
+
+    @include media($mobile-hdpi) {
+        width: 95%;
+        font-size: 0.4em;
+    }
+}
+
+.pos {
+    margin-top: 5em;
+    text-align: center;
+}
+
+    .pos__search {
+        position: relative;
+        width: 80%;
+        height: 5em;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 5px;
+
+        box-shadow: $level-3-shadow;
+    }
+
+
+    .pos__input {
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+
+        // background: #B5A1D3;
+        background: #E2CBFA;
+        border: 3px solid darken(#B5A1D3, 10%);
+        border-right: 0;
+        border-radius: 5px;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+        padding: 0.25em;
+        font-size: 2em;
+        font-family: 'Quicksand', sans-serif;
+        color: #444;
+        width: 75%;
+
+        &::placeholder {
+            color: #444;
+            opacity: 0.5;
+        }
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+
+    .pos__btn {
+        position: absolute;
+        width: 25%;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        border: 3px solid darken(#B5A1D3, 10%);
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+        background: darken(#B5A1D3, 15%);
+        color: #333;
+        font-family: 'Quicksand', sans-serif;
+        font-size: 2em;
+        min-width: 7em;
+
+        cursor: pointer;
+
+        &:focus {
+            outline: none;
+            // animation: rainbow 0.5s;
+            color: #444;
+        }
+
+        &:hover {
+            color: #111;
+        }
+
+    }
+
+    @keyframes rainbow {
+        from {
+            color: #333;
+        }
+
+        12.5% {
+            color: $red-highlight;
+        }
+
+        25% {
+            color: $orange-highlight;
+        }
+
+        37.5% {
+            color: $yellow-highlight;
+        }
+
+        50% {
+            color: $green-highlight;
+        }
+
+        62.5% {
+            color: $blue-highlight;
+        }
+
+        75% {
+            color: $indigo-highlight;
+        }
+
+        87.5% {
+            color: $violet-highlight;
+        }
+
+        to {
+            color: #333;
+        }
+    }
+
+    .pos__list {
+        text-align: left;
+        margin-top: 5em;
+        margin-bottom: 20em;
+        padding-left: 0;
+
+    }
+
+    .pos__token {
+        display: inline-block;
+        cursor: pointer;
+        color: #444;
+        font-family: 'Quicksand', sans-serif;
+        font-size: 3.5em;
+        line-height: 1.5em;
+
+        padding-left: 0.25em;
+        padding-right: 0.25em;
+        padding-top: 0.1em;
+        padding-bottom: 0.1em;
+        margin-left: 0.25em;
+        margin-bottom: 0.25em;
+
+        border-radius: 3px;
+        box-shadow: $level-3-shadow;
+
+        transition: 0.25s ease-out;
+    }
+
+        .pos__token--dim {
+            filter: grayscale(80%);
+            opacity: 0.75;
+        }
+
+        .pos__token--focus {
+            transform: scale(1.1);
+            z-index: 999;
+            position: relative;
+        }
+
+        .pos__token--no-tag {
+            background: $no-tag-color;
+        }
+
+        .pos__token--adj {
+            background: $adj-color;
+        }
+
+        .pos__token--adv {
+            background: $adv-color;
+        }
+
+        .pos__token--adp {
+            background: $adp-color;
+        }
+
+        .pos__token--conj {
+            background: $conj-color;
+        }
+
+        .pos__token--det {
+            background: $det-color;
+        }
+
+        .pos__token--noun {
+            background: $noun-color;
+        }
+
+        .pos__token--num {
+            background: $num-color;
+        }
+
+        .pos__token--pron {
+            background: $pron-color;
+        }
+
+        .pos__token--prt {
+            background: $prt-color;
+        }
+
+        .pos__token--verb {
+            background: $verb-color;
+        }
+
+        .pos__token--x {
+            background: $x-color;
+        }
+
+        .pos__token--punct {
+            background: $punct-color;
+        }
+
+        .pos__token--eol {
+            background: $eol-color;
+        }
+
+
+    .pos__legend {
+        background: rgba(0,0,0,0.25);
+        width: 75%;
+        padding: 2em;
+        // margin-top: 10em;
+        position: fixed;
+        bottom: 3em;
+        z-index: 999;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+
+        border: 2px solid rgba(0,0,0,0.1);
+        border-radius: 5px;
+        box-shadow: $level-3-shadow;
+    }
+
+
+    .pos__legend-item {
+        display: inline;
+        cursor: pointer;
+        font-family: 'Quicksand', sans-serif;
+        font-size: 1.25em;
+        line-height: 2.5em;
+        padding: 0.4em;
+        margin-right: 1em;
+        border-radius: 5px;
+        box-shadow: $level-2-shadow;
+    }
+
+        .pos__legend-item--no-tag {
+            background: $no-tag-color;
+        }
+
+        .pos__legend-item--adj {
+            background: $adj-color;
+        }
+
+        .pos__legend-item--adv {
+            background: $adv-color;
+        }
+
+        .pos__legend-item--adp {
+            background: $adp-color;
+        }
+
+        .pos__legend-item--conj {
+            background: $conj-color;
+        }
+
+        .pos__legend-item--det {
+            background: $det-color;
+        }
+
+        .pos__legend-item--noun {
+            background: $noun-color;
+        }
+
+        .pos__legend-item--num {
+            background: $num-color;
+        }
+
+        .pos__legend-item--pron {
+            background: $pron-color;
+        }
+
+        .pos__legend-item--prt {
+            background: $prt-color;
+        }
+
+        .pos__legend-item--verb {
+            background: $verb-color;
+        }
+
+        .pos__legend-item--x {
+            background: $x-color;
+        }
+
+        .pos__legend-item--punct {
+            background: $punct-color;
+        }
+
+        .pos__legend-item--eol {
+            background: $eol-color;
+        }

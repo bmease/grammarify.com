@@ -1,0 +1,40 @@
+{
+  "name": "web",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "browserify": {
+    "transform": [
+      "coffeeify",
+      "hbsfy"
+    ]
+  },
+  "devDependencies": {
+    "autoprefixer": "*",
+    "browserify": "*",
+    "coffeeify": "*",
+    "gulp": "*",
+    "gulp-livereload": "*",
+    "gulp-postcss": "*",
+    "gulp-sass": "*",
+    "gulp-util": "*",
+    "handlebars": "*",
+    "hbsfy": "*",
+    "node-bourbon": "*",
+    "node-neat": "*",
+    "normalize.css": "*",
+    "postcss-import": "*",
+    "vinyl-source-stream": "*",
+    "watchify": "*"
+  },
+  "dependencies": {
+    "backbone": "*",
+    "jquery": "*",
+    "lodash": "^3.0.1"
+  }
+}

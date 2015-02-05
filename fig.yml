@@ -1,0 +1,17 @@
+api:
+    build: ./api
+    command: python api.py
+    expose:
+        - "5000"
+    volumes:
+        - ./api:/app
+
+web:
+    image: nginx
+    ports:
+        - "8000:80"
+    links:
+        - api
+    volumes:
+        - ./web/static:/app
+        - ./web/nginx.conf:/etc/nginx/nginx.conf
