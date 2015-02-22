@@ -1,6 +1,6 @@
 api:
     build: ./api
-    command: uwsgi --socket 0.0.0.0:5000 --protocol=http -w wsgi:app
+    command: uwsgi --socket :5000 --wsgi-file wsgi.py --callable app
     expose:
         - "5000"
 
