@@ -191,46 +191,22 @@ body {
   z-index: 999;
   position: relative; }
 
-.pos__token--no-tag {
-  background: #eee; }
+.pos__token--verb {
+  background: #FE9292; }
 
-.pos__token--adj {
-  background: #EF8CFF; }
-
-.pos__token--adv {
-  background: #A07FEF; }
-
-.pos__token--adp {
-  background: #F3F598; }
-
-.pos__token--conj {
+.pos__token--adjective {
   background: #92FE96; }
 
-.pos__token--det {
+.pos__token--adverb {
   background: #F3F598; }
 
 .pos__token--noun {
   background: #578EFF; }
 
-.pos__token--num {
-  background: #FFA34A; }
-
-.pos__token--pron {
-  background: #92B5FE; }
-
-.pos__token--prt {
-  background: #F3F598; }
-
-.pos__token--verb {
-  background: #FE9292; }
-
-.pos__token--x {
+.pos__token--glue {
   background: #eee; }
 
-.pos__token--punct {
-  background: #eee; }
-
-.pos__token--eol {
+.pos__token--value {
   background: #eee; }
 
 .pos__legend {
@@ -258,44 +234,20 @@ body {
   border-radius: 5px;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23); }
 
-.pos__legend-item--no-tag {
-  background: #eee; }
+.pos__legend-item--verb {
+  background: #FE9292; }
 
-.pos__legend-item--adj {
-  background: #EF8CFF; }
-
-.pos__legend-item--adv {
-  background: #A07FEF; }
-
-.pos__legend-item--adp {
-  background: #F3F598; }
-
-.pos__legend-item--conj {
+.pos__legend-item--adjective {
   background: #92FE96; }
 
-.pos__legend-item--det {
+.pos__legend-item--adverb {
   background: #F3F598; }
 
 .pos__legend-item--noun {
   background: #578EFF; }
 
-.pos__legend-item--num {
-  background: #FFA34A; }
-
-.pos__legend-item--pron {
-  background: #92B5FE; }
-
-.pos__legend-item--prt {
-  background: #F3F598; }
-
-.pos__legend-item--verb {
-  background: #FE9292; }
-
-.pos__legend-item--x {
+.pos__legend-item--glue {
   background: #eee; }
 
-.pos__legend-item--punct {
-  background: #eee; }
-
-.pos__legend-item--eol {
+.pos__legend-item--value {
   background: #eee; }

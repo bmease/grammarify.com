@@ -26,6 +26,14 @@ $x-color: $white-highlight;
 $punct-color: $white-highlight;
 $eol-color: $white-highlight;
 
+$verb-color: $red-highlight;
+$adjective-color: $green-highlight;
+$adverb-color: $yellow-highlight;
+$noun-color: $blue-highlight;
+$glue-color: $white-highlight;
+$value-color: $white-highlight;
+
+
 
 $level-1-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 $level-2-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
@@ -231,61 +239,89 @@ body {
             position: relative;
         }
 
-        .pos__token--no-tag {
-            background: $no-tag-color;
+        // .pos__token--no-tag {
+        //     background: $no-tag-color;
+        // }
+        //
+        // .pos__token--adj {
+        //     background: $adj-color;
+        // }
+        //
+        // .pos__token--adv {
+        //     background: $adv-color;
+        // }
+        //
+        // .pos__token--adp {
+        //     background: $adp-color;
+        // }
+        //
+        // .pos__token--conj {
+        //     background: $conj-color;
+        // }
+        //
+        // .pos__token--det {
+        //     background: $det-color;
+        // }
+        //
+        // .pos__token--noun {
+        //     background: $noun-color;
+        // }
+        //
+        // .pos__token--num {
+        //     background: $num-color;
+        // }
+        //
+        // .pos__token--pron {
+        //     background: $pron-color;
+        // }
+        //
+        // .pos__token--prt {
+        //     background: $prt-color;
+        // }
+        //
+        // .pos__token--verb {
+        //     background: $verb-color;
+        // }
+        //
+        // .pos__token--x {
+        //     background: $x-color;
+        // }
+        //
+        // .pos__token--punct {
+        //     background: $punct-color;
+        // }
+        //
+        // .pos__token--eol {
+        //     background: $eol-color;
+        // }
+
+
+
+
+        .pos__token--verb {
+            background: $verb-color;
         }
 
-        .pos__token--adj {
-            background: $adj-color;
+        .pos__token--adjective {
+            background: $adjective-color;
         }
 
-        .pos__token--adv {
-            background: $adv-color;
-        }
-
-        .pos__token--adp {
-            background: $adp-color;
-        }
-
-        .pos__token--conj {
-            background: $conj-color;
-        }
-
-        .pos__token--det {
-            background: $det-color;
+        .pos__token--adverb {
+            background: $adverb-color;
         }
 
         .pos__token--noun {
             background: $noun-color;
         }
 
-        .pos__token--num {
-            background: $num-color;
+        .pos__token--glue {
+            background: $glue-color;
         }
 
-        .pos__token--pron {
-            background: $pron-color;
+        .pos__token--value {
+            background: $value-color;
         }
 
-        .pos__token--prt {
-            background: $prt-color;
-        }
-
-        .pos__token--verb {
-            background: $verb-color;
-        }
-
-        .pos__token--x {
-            background: $x-color;
-        }
-
-        .pos__token--punct {
-            background: $punct-color;
-        }
-
-        .pos__token--eol {
-            background: $eol-color;
-        }
 
 
     .pos__legend {
@@ -318,58 +354,84 @@ body {
         box-shadow: $level-2-shadow;
     }
 
-        .pos__legend-item--no-tag {
-            background: $no-tag-color;
+        // .pos__legend-item--no-tag {
+        //     background: $no-tag-color;
+        // }
+        //
+        // .pos__legend-item--adj {
+        //     background: $adj-color;
+        // }
+        //
+        // .pos__legend-item--adv {
+        //     background: $adv-color;
+        // }
+        //
+        // .pos__legend-item--adp {
+        //     background: $adp-color;
+        // }
+        //
+        // .pos__legend-item--conj {
+        //     background: $conj-color;
+        // }
+        //
+        // .pos__legend-item--det {
+        //     background: $det-color;
+        // }
+        //
+        // .pos__legend-item--noun {
+        //     background: $noun-color;
+        // }
+        //
+        // .pos__legend-item--num {
+        //     background: $num-color;
+        // }
+        //
+        // .pos__legend-item--pron {
+        //     background: $pron-color;
+        // }
+        //
+        // .pos__legend-item--prt {
+        //     background: $prt-color;
+        // }
+        //
+        // .pos__legend-item--verb {
+        //     background: $verb-color;
+        // }
+        //
+        // .pos__legend-item--x {
+        //     background: $x-color;
+        // }
+        //
+        // .pos__legend-item--punct {
+        //     background: $punct-color;
+        // }
+        //
+        // .pos__legend-item--eol {
+        //     background: $eol-color;
+        // }
+
+
+
+        .pos__legend-item--verb {
+            background: $verb-color;
         }
 
-        .pos__legend-item--adj {
-            background: $adj-color;
+        .pos__legend-item--adjective {
+            background: $adjective-color;
         }
 
-        .pos__legend-item--adv {
-            background: $adv-color;
-        }
-
-        .pos__legend-item--adp {
-            background: $adp-color;
-        }
-
-        .pos__legend-item--conj {
-            background: $conj-color;
-        }
-
-        .pos__legend-item--det {
-            background: $det-color;
+        .pos__legend-item--adverb {
+            background: $adverb-color;
         }
 
         .pos__legend-item--noun {
             background: $noun-color;
         }
 
-        .pos__legend-item--num {
-            background: $num-color;
+        .pos__legend-item--glue {
+            background: $glue-color;
         }
 
-        .pos__legend-item--pron {
-            background: $pron-color;
-        }
-
-        .pos__legend-item--prt {
-            background: $prt-color;
-        }
-
-        .pos__legend-item--verb {
-            background: $verb-color;
-        }
-
-        .pos__legend-item--x {
-            background: $x-color;
-        }
-
-        .pos__legend-item--punct {
-            background: $punct-color;
-        }
-
-        .pos__legend-item--eol {
-            background: $eol-color;
+        .pos__legend-item--value {
+            background: $value-color;
         }
