@@ -209,6 +209,7 @@ body {
 
     .pos__token {
         display: inline-block;
+        position: relative;
         cursor: pointer;
         color: #444;
         font-family: 'Quicksand', sans-serif;
@@ -226,15 +227,20 @@ body {
         box-shadow: $level-3-shadow;
 
         transition: 0.25s ease-out;
+
+        &:hover .tooltip {
+            display: block;
+        }
     }
 
         .pos__token--dim {
-            filter: grayscale(80%);
+            filter: grayscale(75%);
             opacity: 0.75;
+            transform: scale(0.9);
         }
 
         .pos__token--focus {
-            transform: scale(1.1);
+            transform: scale(1.05);
             z-index: 999;
             position: relative;
         }
@@ -435,3 +441,26 @@ body {
         .pos__legend-item--value {
             background: $value-color;
         }
+
+
+
+.tooltip {
+    position: absolute;
+    width: 11em;
+    left: -50%;
+    bottom: 2em;
+    display: none;
+    background: $violet-highlight;
+    border: 2px solid darken($violet-highlight, 10%);
+    z-index: 999;
+    text-align: center;
+    border-radius: 0.25em;
+    font-size: 0.5em;
+}
+
+    .tooltip__heading {
+        margin: 0;
+        padding: 0;
+        font-size: 1.2em;
+        line-height: 1.2em;
+    }

@@ -163,6 +163,7 @@ body {
 
 .pos__token {
   display: inline-block;
+  position: relative;
   cursor: pointer;
   color: #444;
   font-family: 'Quicksand', sans-serif;
@@ -178,16 +179,21 @@ body {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
   -webkit-transition: 0.25s ease-out;
   transition: 0.25s ease-out; }
+  .pos__token:hover .tooltip {
+    display: block; }
 
 .pos__token--dim {
-  -webkit-filter: grayscale(80%);
-  filter: grayscale(80%);
-  opacity: 0.75; }
+  -webkit-filter: grayscale(75%);
+  filter: grayscale(75%);
+  opacity: 0.75;
+  -webkit-transform: scale(0.9);
+  -ms-transform: scale(0.9);
+  transform: scale(0.9); }
 
 .pos__token--focus {
-  -webkit-transform: scale(1.1);
-  -ms-transform: scale(1.1);
-  transform: scale(1.1);
+  -webkit-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  transform: scale(1.05);
   z-index: 999;
   position: relative; }
 
@@ -251,3 +257,22 @@ body {
 
 .pos__legend-item--value {
   background: #eee; }
+
+.tooltip {
+  position: absolute;
+  width: 11em;
+  left: -50%;
+  bottom: 2em;
+  display: none;
+  background: #A07FEF;
+  border: 2px solid #7e52e9;
+  z-index: 999;
+  text-align: center;
+  border-radius: 0.25em;
+  font-size: 0.5em; }
+
+.tooltip__heading {
+  margin: 0;
+  padding: 0;
+  font-size: 1.2em;
+  line-height: 1.2em; }
