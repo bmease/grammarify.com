@@ -20,7 +20,6 @@ module.exports = class TokenView extends Backbone.View
     }
 
     hoverOn: (pos) =>
-        console.log pos, @model.get('pos')
         if pos isnt @model.get('pos') then @$el.addClass 'pos__token--dim' else @$el.addClass 'pos__token--focus'
 
     hoverOff: =>

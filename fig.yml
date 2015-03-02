@@ -1,12 +1,4 @@
-api:
-    build: ./api
-    command: uwsgi --socket :5000 --wsgi-file wsgi.py --callable app
-    expose:
-        - "5000"
-
 web:
     build: ./web
     ports:
         - "80:80"
-    links:
-        - api
