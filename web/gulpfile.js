@@ -13,6 +13,8 @@ var autoprefixer = require('autoprefixer')
 var postcss = require('gulp-postcss');
 var atImport = require('postcss-import');
 
+var DEBUG = false;
+
 var paths = {
     scripts: {
         entries: ['./static/scripts/src/application.coffee'],
@@ -40,10 +42,10 @@ function bundle(method) {
 }
 
 function buildJS(bundle) {
-    // if (!DEBUG) {
-    //     bundle.transform({ global: true }, 'uglifyify');
-    // }
-    //
+    if (!DEBUG) {
+        bundle.transform({ global: true }, 'uglifyify');
+    }
+
     return bundle.bundle()
         .pipe(source(paths.scripts.destFilename))
         .pipe(gulp.dest(paths.scripts.dest))
@@ -128,4 +130,3 @@ gulp.task('styles', function() {
 });
 
 gulp.task('default', ['scripts', 'styles']);
-

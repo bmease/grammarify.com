@@ -29,6 +29,7 @@
     "node-neat": "*",
     "normalize.css": "*",
     "postcss-import": "*",
+    "uglifyify": "^3.0.1",
     "vinyl-source-stream": "*",
     "watchify": "*"
   },
